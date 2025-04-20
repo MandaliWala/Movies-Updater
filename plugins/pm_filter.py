@@ -20,7 +20,6 @@ FILES_ID = {}
 CAP = {}
 
 # zishan [
-from database.jsreferdb import referdb
 from database.config_db import mdb
 import logging
 from urllib.parse import quote_plus

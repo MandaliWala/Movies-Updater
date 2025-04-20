@@ -79,7 +79,7 @@ async def send_movie_updates(bot, file_name, caption, file_id):
         caption_message = f"#New_File_Added ✅\n\nFile_Name:- <code>{movie_name}</code>\n\nLanguage:- {language}\n\nQuality:- {quality}" 
         search_movie = movie_name.replace(" ", '-')
         movie_update_channel = await db.movies_update_channel_id()    
-        btn = [[
+        btn = [
             InlineKeyboardButton('📂 ɢᴇᴛ ғɪʟᴇ 📂', url=f'https://telegram.me/N2_Movies_Bot?start=getfile-{search_movie}')
         ]
         reply_markup = InlineKeyboardMarkup(btn)

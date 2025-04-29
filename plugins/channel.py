@@ -63,8 +63,6 @@ async def send_movie_updates(bot, file_name, caption, file_id):
                 file_name = file_name[:file_name.find(season) + 1]
         qualities = ["240p", "360p", "480p", "540p", "720p", "960p", "1080p", "1440p", "2K", "2160p", "4k", "5K", "8K"]
         quality = await check_qualities(caption, qualities) or "HDRip"
-        quality += f"{quality}, "
-        quality = quality.strip(", ") or "Not Idea"
         language = ""
         nb_languages = ["Hindi", "Bengali", "English", "Marathi", "Tamil", "Telugu", "Malayalam", "Kannada", "Punjabi", "Gujrati", "Korean", "Japanese", "Bhojpuri", "Dual", "Multi"]    
         for lang in nb_languages:

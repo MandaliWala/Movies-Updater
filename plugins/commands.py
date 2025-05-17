@@ -4,6 +4,7 @@ import random
 import asyncio
 import string
 import pytz
+import time
 from datetime import timedelta
 from datetime import datetime as dt
 from Script import script
@@ -1136,12 +1137,12 @@ async def reset_group_command(client, message):
 
 CMD = ["/", "."]
 
-@Client.on_message(filters.command("alive", CMD))
+@Client.on_message(filters.command("alive"))
 async def check_alive(_, message):
     await message.reply_text("**You are very lucky 🤞 I am alive ❤️ Press /start to use me**")
 
 
-@Client.on_message(filters.command("ping", CMD))
+@Client.on_message(filters.command("ping"))
 async def ping(_, message):
     start_t = time.time()
     rm = await message.reply_text("...")
